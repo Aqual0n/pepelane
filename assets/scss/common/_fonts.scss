@@ -1,0 +1,12 @@
+@mixin newFont($family,$pathName,$weight) {
+    @font-face {
+        font-family: '#{$family}';
+        src: url('~assets/fonts/#{$pathName}.woff2') format('woff2'), url('/public/fonts/#{$pathName}.woff') format('woff');
+        font-weight: #{$weight};
+        font-style: normal;
+    }
+}
+
+@include newFont('bold','CodecPro-Bold', 700);
+@include newFont('reg','CodecPro-Light', 300);
+@include newFont('icon','icomoon', 400);
